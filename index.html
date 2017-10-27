@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Do It! - ToDo App</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/doItStyles.css">
+
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+</head>
+<body onload="loadFunction()">
+<div id="loader"></div>
+<div style="display:none;" id="load-div" class="animate-bottom">
+
+
+    <div class="container-fluid main-container">
+        <div class="row" id="top-row">
+            <div class="col-12">
+                <a id="do-it-nav" href="../../index.html"><< Back to Portfolio</a>
+            </div>
+            <div class="col-12 text-center">
+                <h1 class="heading no-margin">
+                    DO IT!</h1>
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn" id="new-list-btn"><img src="assets/images/plusDark.png"
+                                                                         class="plus-dark img-fluid">
+                    NEW
+                    LIST
+                </button>
+            </div>
+        </div>
+        <div class="row" id="list-row">
+
+        </div>
+        <footer class="fixed-bottom text-center">DO IT!</footer>
+    </div>
+</div>
+
+<!-- Bootstrap & JQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- ToDo Script -->
+<script src="js/toDo.js"></script>
+</body>
+</html>

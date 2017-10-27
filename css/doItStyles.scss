@@ -1,0 +1,289 @@
+@import "../../../css/styles.scss";
+
+$mainColor: #203f58;
+$secondaryColor: #2b5778;
+$white: #ffffff;
+$red: #ff0000;
+$orange: #f78f1e;
+$orangeTinted: #E7819;
+$ltGrey: #636363;
+$roboto: 'Roboto', sans-serif;
+
+.no-margin {
+  margin: 0;
+  color: white;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.row {
+  @extend .no-padding;
+  @extend .no-margin;
+}
+
+[class*="col-"] {
+  @extend .no-padding;
+}
+
+#do-it-nav {
+  margin-top: 5vh;
+  text-decoration: none;
+  color: #fff;
+}
+
+.plus-dark {
+  width: 35px;
+  height: 35px;
+}
+
+body {
+  @extend .no-padding;
+  @extend .no-margin;
+  background-color: $mainColor;
+}
+
+//holds everything
+.main-container {
+  @extend .no-padding;
+  @extend .no-margin;
+  background-color: $mainColor;
+  height: 100vh;
+  font-family: $roboto;
+  padding-top: 5vh;
+  h1 {
+    color: $white;
+    padding: 75px 0 35px 0;
+    font-weight: 700;
+  }
+
+  #new-list-btn {
+    background-color: $white;
+    color: $orange;
+    padding: 2px 20px 2px 2px;
+    border: none;
+    border-radius: 0;
+    //Up to tablet size
+    @media screen and (max-width: 1100px) {
+      margin-bottom: 40px;
+    }
+    //Desktop sizes
+    @media screen and (min-width: 1101px) {
+      margin-bottom: 50px;
+    }
+    img {
+
+      margin-right: 20px;
+    }
+    img:hover {
+      cursor: hand;
+    }
+  }
+
+  #list-row {
+    font-family: $roboto;
+    margin-bottom: 60px;
+    .col-12 {
+      margin-bottom: 10px;
+      .container-fluid {
+        background-color: $secondaryColor;
+        @extend .no-padding;
+        @media (max-width: 1100px) {
+          margin-left: 5%;
+          width: 90%;
+        }
+        @media (min-width: 1101px) {
+          margin-left: 25%;
+          width: 50%;
+        }
+
+        .list-header {
+          background-color: $orange;
+          //Up to tablet size
+          @media (max-width: 990px) {
+            padding: 5px 0 0 15px;
+            height: 45px;
+          }
+          //Desktop sizes
+          @media (min-width: 991px) {
+            padding-left: 20px;
+            height: 35px;
+          }
+          h6 {
+            color: $mainColor;
+            display: inline-block;
+            margin-top: 8px;
+            float: left;
+
+          }
+          .menu-link .header-icon {
+            display: inline-block;
+            color: $ltGrey;
+            padding: 10px;
+            margin-right: 5px;
+          }
+          .menu-link .header-icon:hover {
+            -webkit-transition: color 350ms ease-in-out;
+            -moz-transition: color 350ms ease-in-out;
+            -o-transition: color 350ms ease-in-out;
+            transition: color 350ms ease-in-out;
+            color: $red;
+          }
+
+        }
+        .new-item-btn {
+          background-color: $white;
+          color: $orange;
+          padding: 2px 10px 2px 2px;
+          margin: 10px 5px 5px 5px;
+          border: none;
+          border-radius: 0;
+          width: 135px;
+          height: 30px;
+          cursor: hand;
+          img {
+            width: 25px;
+            height: 25px;
+            float: left;
+            margin-right: 5px;
+            margin-top: 1px;
+          }
+          img:hover {
+            cursor: hand;
+          }
+          p {
+            margin-top: 3px;
+          }
+        }
+        .row {
+          margin: 5px 5%;
+          .list-item {
+
+
+            .input-group {
+              border: none;
+              border-radius: 0;
+
+
+              .input-group-addon {
+                float: left;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                background-color: $ltGrey;
+                border: none;
+              }
+              .input-area {
+                @extend .no-padding;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                padding: 0 5px 0 10px;
+                border: none;
+                color: $mainColor;
+              }
+            }
+
+          }
+          .col-1 {
+            background-color: $white;
+            .remove {
+              float: right;
+              padding: 6px;
+              background-color: $white;
+              color: $ltGrey;
+            }
+            .remove:hover {
+              -webkit-transition: color 350ms ease-in-out;
+              -moz-transition: color 350ms ease-in-out;
+              -o-transition: color 350ms ease-in-out;
+              transition: color 350ms ease-in-out;
+              color: $red;
+              cursor: hand;
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: #1e384f;
+    color: $white;
+    font-family: $roboto;
+    padding: 15px 0;
+  }
+
+}
+
+//END main-container
+
+//loader stuff
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  //width: 150px;
+  //height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid $secondaryColor;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0
+  }
+  to {
+    bottom: 0;
+    opacity: 1
+  }
+}
+
+#load-div {
+  display: none;
+  text-align: center;
+}
